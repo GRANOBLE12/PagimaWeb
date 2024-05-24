@@ -1,0 +1,200 @@
+.Superior {
+    text-align: center;
+}
+.Menú {
+    position: absolute; 
+    top: 35%;
+    left: 35px; 
+    z-index: 2;
+    display: none;
+    width: auto; 
+}
+h1 {
+    color: rgb(255, 7, 7);
+    font-size: 3em;
+}
+
+button {
+    border-radius: 20px;
+    margin-top: 25px;
+    font-size: 25px;
+    text-align: center;
+    width: 100%; 
+    max-width: 250px;
+    display: block;
+    color: rgb(247, 7, 7);
+    background-color: black;
+    line-height: 50px; 
+    transition: all 0.3s ease; 
+    margin-left: 20px;
+}
+
+button:hover {
+    background-color: rgb(255, 255, 255);
+    color: black; 
+    letter-spacing: 5px;
+    transform: translateY(10px);
+}
+
+input.menu-hamburguesa:checked ~ .Superior .Menú {
+    display: block;
+}
+
+.menu-hamburguesa {
+    display: none;
+}
+
+
+label[for="hamburguesa"] {
+    position: absolute;
+    top: 10px; 
+    left: 10px; 
+    cursor: pointer;
+    font-size: 40px;
+    z-index: 4;
+    color: rgb(255, 0, 0);
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.87);
+    z-index: 1; 
+    display: none; 
+}
+
+input.menu-hamburguesa:checked ~ .overlay {
+    display: block;
+}
+
+.Menú a {
+    text-decoration: none; 
+}
+
+.contenedor-imagenes {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.IMG {
+    flex: 0 0 auto;
+     
+}
+
+.IMG img {
+    width: 120px; 
+    height: 300px; 
+    object-fit: cover; 
+    transition: all 400ms;
+    
+}
+
+
+.IMG:nth-child(2) img,
+.IMG:nth-child(4) img {
+    margin-top: 20px; 
+}
+
+.IMG img:hover {
+    width: 250px;
+    opacity: 1;
+}
+
+.contenedor-imagenes:hover .IMG img {
+    opacity: 0.2; 
+}
+
+.contenedor-imagenes .IMG img:hover {
+    opacity: 1; 
+}
+
+/* Teléfonos */
+@media (max-width: 600px) {
+    .Menú {
+        top: 20%; 
+        left: 10px;
+        width: 90%;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    button {
+        font-size: 20px;
+        width: 100%;
+    }
+    label[for="hamburguesa"] {
+        font-size: 30px;
+    }
+    .overlay {
+        width: 60%; 
+        left: 0; 
+    }
+    .IMG img {
+        width: 40px; 
+        height: 100px; 
+        object-fit: cover; 
+        transition: all 400ms;
+        
+    }
+    .IMG img:active {
+        width: 80px;
+        opacity: 1;
+    }
+    
+    .contenedor-imagenes:active .IMG img {
+        opacity: 0.2; 
+    }
+    
+    .contenedor-imagenes .IMG img:active {
+        opacity: 1; 
+    }
+}
+
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .Menú {
+        top: 30%; 
+        left: 20px;
+        width: 80%;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    button {
+        font-size: 22px;
+    }
+    label[for="hamburguesa"] {
+        font-size: 35px;
+    }
+    .overlay {
+        width: 40%; 
+        left: 0; 
+    }
+}
+
+/* Portátiles */
+@media (min-width: 1025px) {
+    .Menú {
+        top: 35%; 
+        left: 35px;
+        width: auto;
+    }
+    h1 {
+        font-size: 3em;
+    }
+    button {
+        font-size: 25px;
+    }
+    label[for="hamburguesa"] {
+        font-size: 40px;
+    }
+    .overlay {
+        width: 25%;
+    }
+}
