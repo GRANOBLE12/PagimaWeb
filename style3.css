@@ -142,7 +142,7 @@ input.menu-hamburguesa:checked ~ .overlay {
         
     }
     .IMG img:active {
-        width: 80px;
+        width: 55px;
         opacity: 1;
     }
     
